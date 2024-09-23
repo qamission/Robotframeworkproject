@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on win32)" generated="2024-08-08T21:34:56.467782" rpa="false" schemaversion="5">
+<suite id="s1" name="Registration" source="C:\Users\S Anil Kumar\virtual\RobotFramework NopCommerce\Tests\Registration.robot">
+<test id="s1-t1" name="TC_REGISTER_002 Register new user with valid email" line="9">
+<kw name="Open app" owner="Common" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-08-08T21:34:56.784134" level="INFO">Opening browser 'Firefox' to base url 'https://demo.nopcommerce.com'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-08-08T21:34:56.784134" elapsed="24.538622"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-08-08T21:35:21.322756" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>4s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2024-08-08T21:35:21.322756" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-08-08T21:34:56.784134" elapsed="24.538622"/>
+</kw>
+<kw name="Navigate to Registration Page" owner="RegistrationPage">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-08-08T21:35:21.322756" level="INFO">Clicking link '//a[@class='ico-register']'.</msg>
+<msg time="2024-08-08T21:35:29.394951" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-08-08T21:35:29.395493" level="FAIL">Link with locator '//a[@class='ico-register']' not found.</msg>
+<arg>${RegisterLink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="FAIL" start="2024-08-08T21:35:21.322756" elapsed="8.081691">Link with locator '//a[@class='ico-register']' not found.</status>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<arg>${RegisterLabel_RegistrationPage}</arg>
+<arg>${RegisterLabel_RegistrationText}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" start="2024-08-08T21:35:29.404447" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-08-08T21:35:21.322756" elapsed="8.081691">Link with locator '//a[@class='ico-register']' not found.</status>
+</kw>
+<kw name="Generate Random Email" owner="RegistrationPage">
+<var>${randomEmail}</var>
+<status status="NOT RUN" start="2024-08-08T21:35:29.404447" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Random Password" owner="RegistrationPage">
+<var>${randomPassword}</var>
+<status status="NOT RUN" start="2024-08-08T21:35:29.404447" elapsed="0.000000"/>
+</kw>
+<kw name="Register user" owner="RegistrationPage">
+<arg>${first_names}[user1]</arg>
+<arg>${register_last_names}[user1]</arg>
+<arg>${randomEmail}</arg>
+<arg>${register_companies}[company1]</arg>
+<arg>${randomPassword}</arg>
+<arg>${randomPassword}</arg>
+<status status="NOT RUN" start="2024-08-08T21:35:29.404447" elapsed="0.000000"/>
+</kw>
+<kw name="Validate successful register" owner="RegistrationPage">
+<status status="NOT RUN" start="2024-08-08T21:35:29.404447" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-08-08T21:35:29.404447" elapsed="7.108274"/>
+</kw>
+<status status="FAIL" start="2024-08-08T21:34:56.784134" elapsed="39.728587">Link with locator '//a[@class='ico-register']' not found.</status>
+</test>
+<status status="FAIL" start="2024-08-08T21:34:56.483911" elapsed="40.030539"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Registration">Registration</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-08-08T21:34:56.768509" level="WARN">Error in file 'C:\Users\S Anil Kumar\virtual\RobotFramework NopCommerce\Keywords\RegistrationPage.robot' on line 14: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-08-08T21:34:56.768509" level="WARN">Error in file 'C:\Users\S Anil Kumar\virtual\RobotFramework NopCommerce\Keywords\RegistrationPage.robot' on line 19: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-08-08T21:34:56.768509" level="WARN">Error in file 'C:\Users\S Anil Kumar\virtual\RobotFramework NopCommerce\Keywords\RegistrationPage.robot' on line 25: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
